@@ -1,7 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { App, InputNumber, CalcBar, InputLabel, Result, PeopleIcon, TextAboutDiv, BillAbountBar, BillValueBox, ContentBox, NumberOfPeopleBar, ResultBox, TipButtonsBar, DollarIcon, ButtonsBar, TipButton, CustomTipInput, CalculationsBar, SummaryButtonsBar, CalcTextBar, CalcTextTitle, CalcExtraInfo, ResetButton, PayButton} from './homeElements'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+
+    useEffect(() => {
+        AOS.init({
+          duration : 2000
+        });
+      }, []);
 
     const buttons = [5, 10, 15, 25, 50];
     const oneOfButtons = buttons.map(button => <TipButton onClick = {e => setTipValue(e.target.value)} value = {button}>{button}%</TipButton>)
@@ -25,7 +33,7 @@ const Home = () => {
     return (
         <>
             <App>
-                <ContentBox>
+                <ContentBox data-aos="fade-right">
 
 
                     {/* Left Side -------------- */}

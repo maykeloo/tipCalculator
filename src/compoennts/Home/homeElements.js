@@ -31,12 +31,13 @@ export const ContentBox = styled.div`
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 95vh;
+        height: 100vh;
+        border-radius: 0;
     }
 
     @media screen and (max-width: 920px)
     {
-        width: 95%;
+        width: 100%;
     }
 `
 
@@ -99,6 +100,11 @@ export const TipButtonsBar = styled.div`
 export const NumberOfPeopleBar = styled.div`
     height: 25%;
     width: 90%;
+
+    @media screen and (max-width: 920px)
+    {
+        margin-top: 20px;
+    }
 `
 
 export const TextAboutDiv = styled.span`
@@ -131,7 +137,7 @@ export const DollarIcon = styled(BiDollarCircle)`
 
 export const ButtonsBar = styled.div`
     width: 100%;
-    height: 70%;
+    height: 20vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -226,7 +232,7 @@ export const CalcTextBar = styled.div`
 export const CalcTextTitle = styled.span`
     font-family: 'Roboto Mono', sans-serif;
     color: white;
-    font-size: 1.6vw;
+    font-size: 2.5vh;
 `
 
 export const CalcExtraInfo = styled.span`
